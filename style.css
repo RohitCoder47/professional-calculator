@@ -1,0 +1,97 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #111119);
+}
+
+/* Calculator Container */
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 30px;
+    background: #17181f;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5), 
+                inset 0px 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Display Screen */
+#display {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#display::placeholder {
+    color: #555;
+}
+
+/* Buttons Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Base Button Style */
+button {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: #222431;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Button Hover Style */
+button:hover {
+    background: #2e3144;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Operators Style (+, -, *, /, %, AC, DEL) */
+.operator {
+    color: #29b6f6;
+    background: #1e293b;
+}
+
+.operator:hover {
+    background: #27374d;
+}
+
+/* Equal Button Special Style */
+.equal-btn {
+    background: #ff9800;
+    color: #ffffff;
+    border-radius: 50px; /* Thoda oval shape dene ke liye */
+}
+
+.equal-btn:hover {
+    background: #e68a00;
+    box-shadow: 0px 4px 15px rgba(255, 152, 0, 0.4);
+}
